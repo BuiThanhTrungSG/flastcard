@@ -1,3 +1,23 @@
-hi hi thử xem lấy về dược không
-thêm vào nha ok bạn
-ổn đấy nha
+Clone về máy
+git clone url
+Khởi tạo repository
+- Vào thư mục lập trình, chuột trái, Git Bash Here, gõ lệnh git init
+Đăng nhập
+git config --global user.name BuiThanhTrungLaptop
+git config --global user.email thanhtrung86nd@gmail.com
+Lệnh : git add
+Tác dụng : Thêm thay đổi vào stage/index trong thư mục làm việc.
+Cách dùng: Tại thư mục làm việc => git add .
+Chỉ định url
+git remote add origin https://github.com/BuiThanhTrungSG/flastcard.git
+Chọn nhánh nếu cần
+git branch -M main
+
+Lệnh: git commit
+Tác dụng: commit là một action để Git lưu lại các sự thay đổi trong thư mục làm việc vào repository
+Cách dùng: git commit -m " add source nhaaaaaa"
+Khi commit thành công
+Đẩy lên mạng
+git push -u origin main
+Đồng bộ trên mạng về máy
+git pull
