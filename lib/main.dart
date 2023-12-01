@@ -44,73 +44,96 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
 
     final kieuChu = TextStyle(fontSize: 13, color: Colors.pink);
+    double chieuRongManHinh = MediaQuery.of(context).size.width;
+
     return Scaffold(
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Wrap(
-          children: [
-            Container(
-              margin: EdgeInsets.fromLTRB(0, 0, 0, 20),
-              child: Column(
+      body: SafeArea(
+        child: Container(
+          color: Color(0xfffce8d2),
+          width: chieuRongManHinh,
+          // Center is a layout widget. It takes a single child and positions it
+          // in the middle of the parent.
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Expanded(
+                  child: Container(
+                    alignment: Alignment.topCenter,
+                    child: Image.asset('assets/lineTop.png', width: chieuRongManHinh,),
+                  )
+              ),
+              Wrap(
                 children: [
-                  IconButton(
-                    icon: Image.asset('assets/icon/iconSo.png'),
-                    iconSize: 150,
-                    onPressed: () {
-                      Navigator.pushNamed(context, "/chuSo");
-                    },
+                  Container(
+                    margin: EdgeInsets.fromLTRB(0, 0, 0, 20),
+                    child: Column(
+                      children: [
+                        IconButton(
+                          icon: Image.asset('assets/icon/iconSo.png'),
+                          iconSize: 150,
+                          onPressed: () {
+                            Navigator.pushNamed(context, "/chuSo");
+                          },
+                        ),
+                        Text("Chữ số", style: kieuChu),
+                      ],
+                    ),
                   ),
-                  Text("Chữ số", style: kieuChu),
+                  Container(
+                    margin: EdgeInsets.fromLTRB(0, 0, 0, 20),
+                    child: Column(
+                      children: [
+                        IconButton(
+                          icon: Image.asset('assets/icon/iconChu.png'),
+                          iconSize: 150,
+                          onPressed: () {
+                            Navigator.pushNamed(context, "/chuCai");
+                          },
+                        ),
+                        Text("Chữ cái", style: kieuChu),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.fromLTRB(0, 0, 0, 20),
+                    child: Column(
+                      children: [
+                        IconButton(
+                          icon: Image.asset('assets/icon/iconDongVatXungQuanh.png'),
+                          iconSize: 150,
+                          onPressed: () {
+                            Navigator.pushNamed(context, "/dongVatXungQuanh");
+                          },
+                        ),
+                        Text("Động vật xung quanh", style: kieuChu),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.fromLTRB(0, 0, 0, 20),
+                    child: Column(
+                      children: [
+                        IconButton(
+                          icon: Image.asset('assets/icon/iconDongVatTuNhien.png'),
+                          iconSize: 150,
+                          onPressed: () {
+                            Navigator.pushNamed(context, "/dongVatXungQuanh");
+                          },
+                        ),
+                        Text("Động vật tự nhiên", style: kieuChu),
+                      ],
+                    ),
+                  ),
                 ],
               ),
-            ),
-            Container(
-              margin: EdgeInsets.fromLTRB(0, 0, 0, 20),
-              child: Column(
-                children: [
-                  IconButton(
-                    icon: Image.asset('assets/icon/iconChu.png'),
-                    iconSize: 150,
-                    onPressed: () {
-                      Navigator.pushNamed(context, "/chuCai");
-                    },
-                  ),
-                  Text("Chữ cái", style: kieuChu),
-                ],
+              Expanded(
+                  child: Container(
+                    alignment: Alignment.bottomCenter,
+                    child: Image.asset('assets/lineBottom.png', width: chieuRongManHinh,),
+                  )
               ),
-            ),
-            Container(
-              margin: EdgeInsets.fromLTRB(0, 0, 0, 20),
-              child: Column(
-                children: [
-                  IconButton(
-                    icon: Image.asset('assets/icon/iconDongVatXungQuanh.png'),
-                    iconSize: 150,
-                    onPressed: () {
-                      Navigator.pushNamed(context, "/dongVatXungQuanh");
-                    },
-                  ),
-                  Text("Động vật xung quanh", style: kieuChu),
-                ],
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.fromLTRB(0, 0, 0, 20),
-              child: Column(
-                children: [
-                  IconButton(
-                    icon: Image.asset('assets/icon/iconDongVatTuNhien.png'),
-                    iconSize: 150,
-                    onPressed: () {
-                      Navigator.pushNamed(context, "/dongVatXungQuanh");
-                    },
-                  ),
-                  Text("Động vật tự nhiên", style: kieuChu),
-                ],
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
