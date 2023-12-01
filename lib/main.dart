@@ -1,6 +1,9 @@
+import 'package:flashcards/dongVatTuNhien.dart';
+import 'package:flashcards/dongVatXungQuanh.dart';
 import 'package:flutter/material.dart';
 
 import 'chuCai.dart';
+import 'chuSo.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,6 +20,9 @@ class MyApp extends StatelessWidget {
       initialRoute: "/",
       routes: {
         "/chuCai": (context) => chuCai(),
+        "/chuSo": (context) => chuSo(),
+        "/dongVatXungQuanh": (context) => dongVatXungQuanh(),
+        "/dongVatTuNhien": (context) => dongVatTuNhien(),
       },
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -33,47 +39,80 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-      Navigator.pushNamed(context, "/chuCai");
-
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
 
+    final kieuChu = TextStyle(fontSize: 13, color: Colors.pink);
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.amber,
-        title: Text(widget.title),
-      ),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
-        child: Column(
-
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'thử phát xem nào',
+        child: Wrap(
+          children: [
+            Container(
+              margin: EdgeInsets.fromLTRB(0, 0, 0, 20),
+              child: Column(
+                children: [
+                  IconButton(
+                    icon: Image.asset('assets/icon/iconSo.png'),
+                    iconSize: 150,
+                    onPressed: () {
+                      Navigator.pushNamed(context, "/chuSo");
+                    },
+                  ),
+                  Text("Chữ số", style: kieuChu),
+                ],
+              ),
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+            Container(
+              margin: EdgeInsets.fromLTRB(0, 0, 0, 20),
+              child: Column(
+                children: [
+                  IconButton(
+                    icon: Image.asset('assets/icon/iconChu.png'),
+                    iconSize: 150,
+                    onPressed: () {
+                      Navigator.pushNamed(context, "/chuCai");
+                    },
+                  ),
+                  Text("Chữ cái", style: kieuChu),
+                ],
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.fromLTRB(0, 0, 0, 20),
+              child: Column(
+                children: [
+                  IconButton(
+                    icon: Image.asset('assets/icon/iconDongVatXungQuanh.png'),
+                    iconSize: 150,
+                    onPressed: () {
+                      Navigator.pushNamed(context, "/dongVatXungQuanh");
+                    },
+                  ),
+                  Text("Động vật xung quanh", style: kieuChu),
+                ],
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.fromLTRB(0, 0, 0, 20),
+              child: Column(
+                children: [
+                  IconButton(
+                    icon: Image.asset('assets/icon/iconDongVatTuNhien.png'),
+                    iconSize: 150,
+                    onPressed: () {
+                      Navigator.pushNamed(context, "/dongVatXungQuanh");
+                    },
+                  ),
+                  Text("Động vật tự nhiên", style: kieuChu),
+                ],
+              ),
             ),
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
