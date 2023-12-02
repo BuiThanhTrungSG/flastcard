@@ -1,5 +1,6 @@
 import 'package:flashcards/dongVatTuNhien.dart';
 import 'package:flashcards/dongVatXungQuanh.dart';
+import 'package:flashcards/quanAo.dart';
 import 'package:flutter/material.dart';
 
 import 'chuCai.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         "/chuSo": (context) => chuSo(),
         "/dongVatXungQuanh": (context) => dongVatXungQuanh(),
         "/dongVatTuNhien": (context) => dongVatTuNhien(),
+        "/quanAo": (context) => quanAo(),
       },
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -121,6 +123,21 @@ class _MyHomePageState extends State<MyHomePage> {
                           },
                         ),
                         Text("Động vật tự nhiên", style: kieuChu),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.fromLTRB(0, 0, 0, 20),
+                    child: Column(
+                      children: [
+                        IconButton(
+                          icon: Image.asset('assets/icon/iconQuanAo.png'),
+                          iconSize: 150,
+                          onPressed: () {
+                            Navigator.pushNamed(context, "/quanAo");
+                          },
+                        ),
+                        Text("Quần áo", style: kieuChu),
                       ],
                     ),
                   ),
