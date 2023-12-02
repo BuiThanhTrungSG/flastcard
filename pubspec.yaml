@@ -70,6 +70,21 @@ flutter:
     - assets/audio/dongVatXungQuanh/giongBac/
     - assets/audio/dongVatXungQuanh/giongNam/
     - assets/image/dongVatXungQuanh/
+    - assets/audio/dongVatTuNhien/giongBac/
+    - assets/audio/dongVatTuNhien/giongNam/
+    - assets/image/dongVatTuNhien/
+    - assets/audio/doVat/giongBac/
+    - assets/audio/doVat/giongNam/
+    - assets/image/doVat/
+    - assets/audio/ngoaiTroi/giongBac/
+    - assets/audio/ngoaiTroi/giongNam/
+    - assets/image/ngoaiTroi/
+    - assets/audio/quanAo/giongBac/
+    - assets/audio/quanAo/giongNam/
+    - assets/image/quanAo/
+    - assets/audio/anUong/giongBac/
+    - assets/audio/anUong/giongNam/
+    - assets/image/anUong/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

@@ -12,8 +12,8 @@ class dongVatTuNhien extends StatefulWidget{
 
 class dongVatTuNhien_state extends State<dongVatTuNhien>{
 
-  // List<String> danhSach = ['ca','ga','cho','meo','lon','trau'];
-  List<String> danhSach = ['cá','gà','chó','mèo','lợn','trâu','bò','vịt'];
+  List<String> danhSach = ['bướm','chim','cừu','dê','gấu','hươu','hổ','khỉ','kiến','ngựa','ong','rùa','rắn',
+  'sâu','sóc','thỏ','voi','ếch'];
   int selectedIndex = 0;
   PageController _controller = PageController(initialPage: 0, keepPage: false);
   bool statusGiongBac = false;
@@ -114,7 +114,7 @@ class dongVatTuNhien_state extends State<dongVatTuNhien>{
                                         Radius.circular(20.0) //                 <--- border radius here
                                     ),
                                   ),
-                                  child: Image.asset('assets/image/dongVatXungQuanh/$tenfile.png')
+                                  child: Image.asset('assets/image/dongVatTuNhien/$tenfile.png')
                               ),
                             );
                           })),
@@ -170,9 +170,9 @@ class dongVatTuNhien_state extends State<dongVatTuNhien>{
     if (!statusTatAm){
       final player = AudioPlayer();
       if (statusGiongBac){
-        player.play(AssetSource('audio/dongVatXungQuanh/giongBac/$tenfile.m4a'));
+        player.play(AssetSource('audio/dongVatTuNhien/giongBac/$tenfile.m4a'));
       }else{
-        player.play(AssetSource('audio/dongVatXungQuanh/giongNam/$tenfile.mp3'));
+        player.play(AssetSource('audio/dongVatTuNhien/giongNam/$tenfile.mp3'));
       }
     }
   }

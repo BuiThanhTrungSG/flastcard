@@ -117,7 +117,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           icon: Image.asset('assets/icon/iconDongVatTuNhien.png'),
                           iconSize: 150,
                           onPressed: () {
-                            Navigator.pushNamed(context, "/dongVatXungQuanh");
+                            Navigator.pushNamed(context, "/dongVatTuNhien");
                           },
                         ),
                         Text("Động vật tự nhiên", style: kieuChu),
