@@ -48,10 +48,21 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
+
+
   @override
   Widget build(BuildContext context) {
 
-    final kieuChu = TextStyle(fontSize: 13, color: Colors.pink);
+    final khungAnh = BoxDecoration(
+        color: Colors.white,
+        border: Border.all(color: Colors.orange, width: 4),
+        borderRadius: BorderRadius.all(Radius.circular(10.0)
+        ));
+
+    final TextStyle kieuChu = const TextStyle(fontSize: 13, color: Colors.deepOrangeAccent, fontWeight: FontWeight.bold);
+    final double iconSize = 180;
+    final EdgeInsetsGeometry coAnh = EdgeInsets.fromLTRB(0, 15, 0, 15);
+
     double chieuRongManHinh = MediaQuery.of(context).size.width;
 
     return Scaffold(
@@ -76,11 +87,10 @@ class _MyHomePageState extends State<MyHomePage> {
                     scrollDirection: Axis.vertical,
                     child: Wrap(
                       direction: Axis.horizontal,
-                      // spacing: 8,
-                      // runSpacing: 12,
+                      // spacing: 5,
+                      runSpacing: 12,
                       children: [
                         Container(
-                          margin: EdgeInsets.fromLTRB(0, 0, 0, 20),
                           child: Column(
                             children: [
                               IconButton(
@@ -95,7 +105,6 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                         ),
                         Container(
-                          margin: EdgeInsets.fromLTRB(0, 0, 0, 20),
                           child: Column(
                             children: [
                               IconButton(
@@ -110,12 +119,15 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                         ),
                         Container(
-                          margin: EdgeInsets.fromLTRB(0, 0, 0, 20),
                           child: Column(
                             children: [
                               IconButton(
-                                icon: Image.asset('assets/icon/iconDongVatXungQuanh.png'),
-                                iconSize: 150,
+                                icon: Container(
+                                    padding: coAnh,
+                                    decoration: khungAnh,
+                                    child: Image.asset('assets/image/dongVatXungQuanh/gà.png')
+                                ),
+                                iconSize: iconSize,
                                 onPressed: () {
                                   Navigator.pushNamed(context, "/dongVatXungQuanh");
                                 },
@@ -125,12 +137,17 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                         ),
                         Container(
-                          margin: EdgeInsets.fromLTRB(0, 0, 0, 20),
                           child: Column(
                             children: [
                               IconButton(
-                                icon: Image.asset('assets/icon/iconDongVatTuNhien.png'),
-                                iconSize: 150,
+                                icon: Container(
+                                    child: Container(
+                                        padding: coAnh,
+                                        decoration: khungAnh,
+                                        child: Image.asset('assets/image/dongVatTuNhien/thỏ.png')
+                                    )
+                                ),
+                                iconSize: iconSize,
                                 onPressed: () {
                                   Navigator.pushNamed(context, "/dongVatTuNhien");
                                 },
@@ -140,12 +157,14 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                         ),
                         Container(
-                          margin: EdgeInsets.fromLTRB(0, 0, 0, 20),
                           child: Column(
                             children: [
                               IconButton(
-                                icon: Image.asset('assets/icon/iconQuanAo.png'),
-                                iconSize: 150,
+                                icon: Container(
+                                    padding: coAnh,
+                                    decoration: khungAnh,
+                                    child: Image.asset('assets/image/quanAo/áo.png')),
+                                iconSize: iconSize,
                                 onPressed: () {
                                   Navigator.pushNamed(context, "/quanAo");
                                 },
@@ -155,12 +174,14 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                         ),
                         Container(
-                          margin: EdgeInsets.fromLTRB(0, 0, 0, 20),
                           child: Column(
                             children: [
                               IconButton(
-                                icon: Image.asset('assets/icon/iconQuanAo.png'),
-                                iconSize: 150,
+                                icon: Container(
+                                    padding: coAnh,
+                                    decoration: khungAnh,
+                                    child: Image.asset('assets/image/doVat/đèn.png')),
+                                iconSize: iconSize,
                                 onPressed: () {
                                   Navigator.pushNamed(context, "/doVat");
                                 },
@@ -170,12 +191,14 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                         ),
                         Container(
-                          margin: EdgeInsets.fromLTRB(0, 0, 0, 20),
                           child: Column(
                             children: [
                               IconButton(
-                                icon: Image.asset('assets/icon/iconQuanAo.png'),
-                                iconSize: 150,
+                                icon: Container(
+                                    padding: coAnh,
+                                    decoration: khungAnh,
+                                    child: Image.asset('assets/image/ngoaiTroi/cây.png')),
+                                iconSize: iconSize,
                                 onPressed: () {
                                   Navigator.pushNamed(context, "/ngoaiTroi");
                                 },
@@ -185,12 +208,14 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                         ),
                         Container(
-                          margin: EdgeInsets.fromLTRB(0, 0, 0, 20),
                           child: Column(
                             children: [
                               IconButton(
-                                icon: Image.asset('assets/icon/iconQuanAo.png'),
-                                iconSize: 150,
+                                icon: Container(
+                                    padding: coAnh,
+                                    decoration: khungAnh,
+                                    child: Image.asset('assets/image/anUong/bánh.png')),
+                                iconSize: iconSize,
                                 onPressed: () {
                                   Navigator.pushNamed(context, "/anUong");
                                 },
