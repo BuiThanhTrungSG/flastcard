@@ -76,7 +76,6 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-
                 alignment: Alignment.topCenter,
                 child: Image.asset('assets/lineTop.png', width: chieuRongManHinh,),
               ),
@@ -86,16 +85,21 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: SingleChildScrollView(
                     scrollDirection: Axis.vertical,
                     child: Wrap(
-                      direction: Axis.horizontal,
+                      // direction: Axis.horizontal,
                       // spacing: 5,
                       runSpacing: 12,
                       children: [
+                        Container(
+                          alignment: Alignment.center,
+                          width: chieuRongManHinh,
+                            child: Text('DÀNH CHO TRẺ BẬT ÂM (1 TỪ)', style: kieuChu,)
+                        ),
                         Container(
                           child: Column(
                             children: [
                               IconButton(
                                 icon: Image.asset('assets/icon/iconSo.png'),
-                                iconSize: 150,
+                                iconSize: iconSize,
                                 onPressed: () {
                                   Navigator.pushNamed(context, "/chuSo");
                                 },
@@ -109,7 +113,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             children: [
                               IconButton(
                                 icon: Image.asset('assets/icon/iconChu.png'),
-                                iconSize: 150,
+                                iconSize: iconSize,
                                 onPressed: () {
                                   Navigator.pushNamed(context, "/chuCai");
                                 },
@@ -224,6 +228,48 @@ class _MyHomePageState extends State<MyHomePage> {
                             ],
                           ),
                         ),
+                        Container(
+                            alignment: Alignment.center,
+                            width: chieuRongManHinh,
+                            color: Color(0x83FFB000),
+                            padding: EdgeInsets.all(6),
+                            child: Text('THẺ PHÁT ÂM 2 TỪ', style: kieuChu,)
+                        ),
+                        Container(
+                          child: Column(
+                            children: [
+                              IconButton(
+                                icon: Container(
+                                    padding: coAnh,
+                                    decoration: khungAnh,
+                                    child: Image.asset('assets/image/anUong/bánh.png')),
+                                iconSize: iconSize,
+                                onPressed: () {
+                                  Navigator.pushNamed(context, "/anUong");
+                                },
+                              ),
+                              Text("Ăn uống", style: kieuChu),
+                            ],
+                          ),
+                        ),
+                        Container(
+                          child: Column(
+                            children: [
+                              IconButton(
+                                icon: Container(
+                                    padding: coAnh,
+                                    decoration: khungAnh,
+                                    child: Image.asset('assets/image/anUong/bánh.png')),
+                                iconSize: iconSize,
+                                onPressed: () {
+                                  Navigator.pushNamed(context, "/anUong");
+                                },
+                              ),
+                              Text("Ăn uống", style: kieuChu),
+                            ],
+                          ),
+                        ),
+
                       ],
                     ),
                   ),
