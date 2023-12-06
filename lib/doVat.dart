@@ -14,7 +14,7 @@ class doVat_state extends State<doVat>{
 
   // List<String> danhSach = ['ca','ga','cho','meo','lon','trau'];
   List<String> danhSach = ['bàn','ghế','giường','tủ','bút','kéo','sách','thước','cặp',
-  'đèn','quạt','vợt','bóng'];
+  'đèn','quạt'];
   int selectedIndex = 0;
   PageController _controller = PageController(initialPage: 0, keepPage: false);
   bool statusGiongBac = false;

@@ -63,28 +63,9 @@ flutter:
   assets:
     - assets/
     - assets/icon/
-    - assets/audio/chuCai/giongBac/
-    - assets/audio/chuCai/giongNam/
-    - assets/audio/chuSo/giongBac/
-    - assets/audio/chuSo/giongNam/
-    - assets/audio/dongVatXungQuanh/giongBac/
-    - assets/audio/dongVatXungQuanh/giongNam/
-    - assets/image/dongVatXungQuanh/
-    - assets/audio/dongVatTuNhien/giongBac/
-    - assets/audio/dongVatTuNhien/giongNam/
-    - assets/image/dongVatTuNhien/
-    - assets/audio/doVat/giongBac/
-    - assets/audio/doVat/giongNam/
-    - assets/image/doVat/
-    - assets/audio/ngoaiTroi/giongBac/
-    - assets/audio/ngoaiTroi/giongNam/
-    - assets/image/ngoaiTroi/
-    - assets/audio/quanAo/giongBac/
-    - assets/audio/quanAo/giongNam/
-    - assets/image/quanAo/
-    - assets/audio/anUong/giongBac/
-    - assets/audio/anUong/giongNam/
-    - assets/image/anUong/
+    - assets/audio/card/giongNam/
+    - assets/audio/card/giongBac/
+    - assets/image/card/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

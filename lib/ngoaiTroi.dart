@@ -13,7 +13,7 @@ class ngoaiTroi extends StatefulWidget{
 class ngoaiTroi_state extends State<ngoaiTroi>{
 
   // List<String> danhSach = ['ca','ga','cho','meo','lon','trau'];
-  List<String> danhSach = ['cây','cỏ','hoa','lá','nấm','nhà','thuyền','xe','mưa','nước','lửa'];
+  List<String> danhSach = ['cây','cỏ','hoa','lá','nấm','nhà','thuyền','xe','bóng','vợt','mưa','nước','lửa'];
   int selectedIndex = 0;
   PageController _controller = PageController(initialPage: 0, keepPage: false);
   bool statusGiongBac = false;
