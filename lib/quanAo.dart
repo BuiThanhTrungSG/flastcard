@@ -114,7 +114,7 @@ class quanAo_state extends State<quanAo>{
                                         Radius.circular(20.0) //                 <--- border radius here
                                     ),
                                   ),
-                                  child: Image.asset('assets/image/quanAo/$tenfile.png')
+                                  child: Image.asset('assets/image/card/$tenfile.png')
                               ),
                             );
                           })),
@@ -170,9 +170,9 @@ class quanAo_state extends State<quanAo>{
     if (!statusTatAm){
       final player = AudioPlayer();
       if (statusGiongBac){
-        player.play(AssetSource('audio/quanAo/giongBac/$tenfile.m4a'));
+        player.play(AssetSource('audio/card/giongBac/$tenfile.m4a'));
       }else{
-        player.play(AssetSource('audio/quanAo/giongNam/$tenfile.mp3'));
+        player.play(AssetSource('audio/card/giongNam/$tenfile.mp3'));
       }
     }
   }

@@ -114,7 +114,7 @@ class dongVatXungQuanh_state extends State<dongVatXungQuanh>{
                                         Radius.circular(20.0) //                 <--- border radius here
                                     ),
                                   ),
-                                  child: Image.asset('assets/image/dongVatXungQuanh/$tenfile.png')
+                                  child: Image.asset('assets/image/card/$tenfile.png')
                               ),
                             );
                           })),
@@ -170,9 +170,9 @@ class dongVatXungQuanh_state extends State<dongVatXungQuanh>{
     if (!statusTatAm){
       final player = AudioPlayer();
       if (statusGiongBac){
-        player.play(AssetSource('audio/dongVatXungQuanh/giongBac/$tenfile.m4a'));
+        player.play(AssetSource('audio/card/giongBac/$tenfile.m4a'));
       }else{
-        player.play(AssetSource('audio/dongVatXungQuanh/giongNam/$tenfile.mp3'));
+        player.play(AssetSource('audio/card/giongNam/$tenfile.mp3'));
       }
     }
   }

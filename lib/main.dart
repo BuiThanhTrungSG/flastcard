@@ -48,20 +48,19 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
+  final khungAnh = BoxDecoration(
+      color: Colors.white,
+      border: Border.all(color: Colors.orange, width: 4),
+      borderRadius: BorderRadius.all(Radius.circular(10.0)
+      ));
 
+  final TextStyle kieuChu = const TextStyle(fontSize: 13, color: Colors.deepOrangeAccent, fontWeight: FontWeight.bold);
+  final TextStyle kieuChuIcon = const TextStyle(fontSize: 120, color: Colors.pinkAccent, fontFamily: 'arial');
+  final double iconSize = 180;
+  final EdgeInsetsGeometry coAnh = EdgeInsets.fromLTRB(0, 15, 0, 15);
 
   @override
   Widget build(BuildContext context) {
-
-    final khungAnh = BoxDecoration(
-        color: Colors.white,
-        border: Border.all(color: Colors.orange, width: 4),
-        borderRadius: BorderRadius.all(Radius.circular(10.0)
-        ));
-
-    final TextStyle kieuChu = const TextStyle(fontSize: 13, color: Colors.deepOrangeAccent, fontWeight: FontWeight.bold);
-    final double iconSize = 180;
-    final EdgeInsetsGeometry coAnh = EdgeInsets.fromLTRB(0, 15, 0, 15);
 
     double chieuRongManHinh = MediaQuery.of(context).size.width;
 
@@ -98,7 +97,14 @@ class _MyHomePageState extends State<MyHomePage> {
                           child: Column(
                             children: [
                               IconButton(
-                                icon: Image.asset('assets/icon/iconSo.png'),
+                                icon: Container(
+                                    alignment: Alignment.center,
+                                    height: 250,
+                                    width: 120,
+                                    padding: coAnh,
+                                    decoration: khungAnh,
+                                    child: Text("1", style: kieuChuIcon)
+                                ),
                                 iconSize: iconSize,
                                 onPressed: () {
                                   Navigator.pushNamed(context, "/chuSo");
@@ -112,7 +118,14 @@ class _MyHomePageState extends State<MyHomePage> {
                           child: Column(
                             children: [
                               IconButton(
-                                icon: Image.asset('assets/icon/iconChu.png'),
+                                icon: Container(
+                                    alignment: Alignment.center,
+                                    height: 250,
+                                    width: 120,
+                                    padding: coAnh,
+                                    decoration: khungAnh,
+                                    child: Text("A", style: kieuChuIcon)
+                                ),
                                 iconSize: iconSize,
                                 onPressed: () {
                                   Navigator.pushNamed(context, "/chuCai");
@@ -129,7 +142,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 icon: Container(
                                     padding: coAnh,
                                     decoration: khungAnh,
-                                    child: Image.asset('assets/image/dongVatXungQuanh/gà.png')
+                                    child: Image.asset('assets/image/card/gà.png')
                                 ),
                                 iconSize: iconSize,
                                 onPressed: () {
@@ -148,7 +161,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                     child: Container(
                                         padding: coAnh,
                                         decoration: khungAnh,
-                                        child: Image.asset('assets/image/dongVatTuNhien/thỏ.png')
+                                        child: Image.asset('assets/image/card/thỏ.png')
                                     )
                                 ),
                                 iconSize: iconSize,
@@ -167,7 +180,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 icon: Container(
                                     padding: coAnh,
                                     decoration: khungAnh,
-                                    child: Image.asset('assets/image/quanAo/áo.png')),
+                                    child: Image.asset('assets/image/card/áo.png')),
                                 iconSize: iconSize,
                                 onPressed: () {
                                   Navigator.pushNamed(context, "/quanAo");
@@ -184,7 +197,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 icon: Container(
                                     padding: coAnh,
                                     decoration: khungAnh,
-                                    child: Image.asset('assets/image/doVat/đèn.png')),
+                                    child: Image.asset('assets/image/card/đèn.png')),
                                 iconSize: iconSize,
                                 onPressed: () {
                                   Navigator.pushNamed(context, "/doVat");
@@ -201,7 +214,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 icon: Container(
                                     padding: coAnh,
                                     decoration: khungAnh,
-                                    child: Image.asset('assets/image/ngoaiTroi/cây.png')),
+                                    child: Image.asset('assets/image/card/cây.png')),
                                 iconSize: iconSize,
                                 onPressed: () {
                                   Navigator.pushNamed(context, "/ngoaiTroi");
@@ -218,7 +231,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 icon: Container(
                                     padding: coAnh,
                                     decoration: khungAnh,
-                                    child: Image.asset('assets/image/anUong/bánh.png')),
+                                    child: Image.asset('assets/image/card/bánh.png')),
                                 iconSize: iconSize,
                                 onPressed: () {
                                   Navigator.pushNamed(context, "/anUong");
@@ -228,47 +241,47 @@ class _MyHomePageState extends State<MyHomePage> {
                             ],
                           ),
                         ),
-                        Container(
-                            alignment: Alignment.center,
-                            width: chieuRongManHinh,
-                            color: Color(0x83FFB000),
-                            padding: EdgeInsets.all(6),
-                            child: Text('THẺ PHÁT ÂM 2 TỪ', style: kieuChu,)
-                        ),
-                        Container(
-                          child: Column(
-                            children: [
-                              IconButton(
-                                icon: Container(
-                                    padding: coAnh,
-                                    decoration: khungAnh,
-                                    child: Image.asset('assets/image/anUong/bánh.png')),
-                                iconSize: iconSize,
-                                onPressed: () {
-                                  Navigator.pushNamed(context, "/anUong");
-                                },
-                              ),
-                              Text("Ăn uống", style: kieuChu),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          child: Column(
-                            children: [
-                              IconButton(
-                                icon: Container(
-                                    padding: coAnh,
-                                    decoration: khungAnh,
-                                    child: Image.asset('assets/image/anUong/bánh.png')),
-                                iconSize: iconSize,
-                                onPressed: () {
-                                  Navigator.pushNamed(context, "/anUong");
-                                },
-                              ),
-                              Text("Ăn uống", style: kieuChu),
-                            ],
-                          ),
-                        ),
+                        // Container(
+                        //     alignment: Alignment.center,
+                        //     width: chieuRongManHinh,
+                        //     color: Color(0x83FFB000),
+                        //     padding: EdgeInsets.all(6),
+                        //     child: Text('THẺ PHÁT ÂM 2 TỪ', style: kieuChu,)
+                        // ),
+                        // Container(
+                        //   child: Column(
+                        //     children: [
+                        //       IconButton(
+                        //         icon: Container(
+                        //             padding: coAnh,
+                        //             decoration: khungAnh,
+                        //             child: Image.asset('assets/image/card/bánh.png')),
+                        //         iconSize: iconSize,
+                        //         onPressed: () {
+                        //           Navigator.pushNamed(context, "/anUong");
+                        //         },
+                        //       ),
+                        //       Text("Ăn uống", style: kieuChu),
+                        //     ],
+                        //   ),
+                        // ),
+                        // Container(
+                        //   child: Column(
+                        //     children: [
+                        //       IconButton(
+                        //         icon: Container(
+                        //             padding: coAnh,
+                        //             decoration: khungAnh,
+                        //             child: Image.asset('assets/image/card/bánh.png')),
+                        //         iconSize: iconSize,
+                        //         onPressed: () {
+                        //           Navigator.pushNamed(context, "/anUong");
+                        //         },
+                        //       ),
+                        //       Text("Ăn uống", style: kieuChu),
+                        //     ],
+                        //   ),
+                        // ),
 
                       ],
                     ),

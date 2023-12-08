@@ -199,9 +199,9 @@ class chuCai_state extends State<chuCai> {
     if (!statusTatAm){
       final player = AudioPlayer();
       if (statusGiongBac){
-        player.play(AssetSource('audio/chuCai/giongBac/$tenfile.m4a'));
+        player.play(AssetSource('audio/card/giongBac/$tenfile.m4a'));
       }else{
-        player.play(AssetSource('audio/chuCai/giongNam/$tenfile.mp3'));
+        player.play(AssetSource('audio/card/giongNam/$tenfile.mp3'));
       }
     }
   }

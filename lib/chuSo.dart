@@ -12,7 +12,7 @@ class chuSo extends StatefulWidget{
 
 class chuSo_state extends State<chuSo>{
 
-  List<String> danhSachChu = ['1','2','3','4','5','6','7','8','9','0'];
+  List<String> danhSachChu = ['1','2','3','4','5','6','7','8','9','10'];
   int selectedIndex = 0;
   PageController _controller = PageController(initialPage: 0, keepPage: false);
   bool statusGiongBac = false;
@@ -123,7 +123,7 @@ class chuSo_state extends State<chuSo>{
                                 style: TextStyle(
                                   color: Colors.pinkAccent,
                                   fontFamily: 'arial',
-                                  fontSize: 350,
+                                  fontSize: danhSachChu[indext] == "10" ? 300 : 350,
                                 ),
                               ),
                             ),
@@ -179,9 +179,9 @@ class chuSo_state extends State<chuSo>{
     if (!statusTatAm){
       final player = AudioPlayer();
       if (statusGiongBac){
-        player.play(AssetSource('audio/chuSo/giongBac/$tenfile.mp3'));
+        player.play(AssetSource('audio/card/giongBac/$tenfile.mp3'));
       }else{
-        player.play(AssetSource('audio/chuSo/giongNam/$tenfile.mp3'));
+        player.play(AssetSource('audio/card/giongNam/$tenfile.mp3'));
       }
     }
   }
